@@ -15,6 +15,8 @@
 		4072451E1C62AA2000DDCA92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4072451C1C62AA2000DDCA92 /* LaunchScreen.storyboard */; };
 		407245291C62AA2000DDCA92 /* Spring2016Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407245281C62AA2000DDCA92 /* Spring2016Tests.swift */; };
 		407245341C62AA2000DDCA92 /* Spring2016UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407245331C62AA2000DDCA92 /* Spring2016UITests.swift */; };
+		4073E4761C6535EC00764783 /* PhotoStackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4073E4751C6535EC00764783 /* PhotoStackView.m */; };
+		4073E4791C65389000764783 /* PhotoboxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4073E4781C65389000764783 /* PhotoboxView.m */; };
 		EA7EE659DFB0A01E6862C991 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8609A277626CA72795D9CAD9 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +53,11 @@
 		4072452F1C62AA2000DDCA92 /* Spring2016UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Spring2016UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		407245331C62AA2000DDCA92 /* Spring2016UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spring2016UITests.swift; sourceTree = "<group>"; };
 		407245351C62AA2000DDCA92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4073E4741C6535EC00764783 /* Spring2016-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Spring2016-Bridging-Header.h"; sourceTree = "<group>"; };
+		4073E4751C6535EC00764783 /* PhotoStackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoStackView.m; sourceTree = "<group>"; };
+		4073E4771C65361C00764783 /* PhotoStackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoStackView.h; sourceTree = "<group>"; };
+		4073E4781C65389000764783 /* PhotoboxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoboxView.m; sourceTree = "<group>"; };
+		4073E47A1C6538BD00764783 /* PhotoboxView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoboxView.h; sourceTree = "<group>"; };
 		69703A20C3304A0948594389 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8609A277626CA72795D9CAD9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -113,6 +120,11 @@
 				4072451C1C62AA2000DDCA92 /* LaunchScreen.storyboard */,
 				4072451F1C62AA2000DDCA92 /* Info.plist */,
 				407245171C62AA2000DDCA92 /* Spring2016.xcdatamodeld */,
+				4073E4751C6535EC00764783 /* PhotoStackView.m */,
+				4073E4741C6535EC00764783 /* Spring2016-Bridging-Header.h */,
+				4073E4771C65361C00764783 /* PhotoStackView.h */,
+				4073E4781C65389000764783 /* PhotoboxView.m */,
+				4073E47A1C6538BD00764783 /* PhotoboxView.h */,
 			);
 			path = Spring2016;
 			sourceTree = "<group>";
@@ -334,8 +346,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4073E4791C65389000764783 /* PhotoboxView.m in Sources */,
 				407245191C62AA2000DDCA92 /* Spring2016.xcdatamodeld in Sources */,
 				407245131C62AA2000DDCA92 /* ViewController.swift in Sources */,
+				4073E4761C6535EC00764783 /* PhotoStackView.m in Sources */,
 				407245111C62AA2000DDCA92 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -479,10 +493,13 @@
 			baseConfigurationReference = 2A275128953B7A7D6C780912 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Spring2016/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.WardOne.Spring2016;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Spring2016/Spring2016-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -491,10 +508,12 @@
 			baseConfigurationReference = 69703A20C3304A0948594389 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Spring2016/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.WardOne.Spring2016;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Spring2016/Spring2016-Bridging-Header.h";
 			};
 			name = Release;
 		};
