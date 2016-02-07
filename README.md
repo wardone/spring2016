@@ -11,5 +11,5 @@ Next
 
 * clone repo
 * `$ cd <path-to-project>`
-* pod install
+* `$ pod install`
 * open `.xcworkspace` from this time onwards you must use the `.xcworkspace` file to open the project.
